@@ -6,4 +6,51 @@
 :root{
     --title-font : "Koulen";
     --content-font : "Battambang";
+    --navbar-background : #1F3B1F;
+}  
+.navbar-container{
+    width: 100%;
+    height: 50px;
+    background-color: var(--navbar-background);
+    font-family: var(--content-font);
+}
+.navbar-container .navbar-menu{
+    display: flex;
+    list-style: none;
+}
+.navbar-menu li{
+    padding: 12px 20px;
+    position: relative;
+}
+.navbar-menu li a{
+    color: white;
+    text-decoration: none;
+}
+.dropdown{
+    list-style: none;
+    position: absolute;
+    background-color: var(--navbar-background);
+    left: 0%;
+    top: 95%;
+    padding: 0;
+    height: 0;
+    transition: 0.4s;
+}
+.dropdown li {
+    display: block;
+    padding: 10px 30px 10px 36px;
+}
+.dropdown li:hover{
+    background-color: rgba(152, 149, 149, 0.295);
+}
+.navbar-menu li i{
+    transition: 0.3s;
+}
+.navbar-menu li:hover i{
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+.navbar-menu li:hover .dropdown{
+    height: 150px;
+    transition: 0.4s;
 }
